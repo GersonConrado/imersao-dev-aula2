@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/ionic/ionicons/256/game-controller-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Imersão Aula 2</title>
+</head>
+
+<body>
+    <div class="lore">
+
+        <h3 class="enredo">
+
+           <spam class="falas"><label><img src="https://img.icons8.com/?size=30&id=12915&format=png&color=000000"></label><u>Narrador:</u></spam> Durante seu treinamento em Greed Island, Gon e Killua devem usar Gyo e responder
+            rapidamente qual número Biscuit está mostrando com o seu Nem...
+
+        </h3>
+
+        <div>
+          <video class="video" controls src="GonxKillua.mp4"></video>
+        </div>
+
+      </div>
+
+      <div class="centro">
+
+        <h3 class="enredo">
+
+          <spam class="falas"><label><img src="https://img.icons8.com/?size=30&id=12915&format=png&color=000000"></label><u>Narrador:</u></spam> Ajude Gon a ganhar no pedra,papel e tesoura.
+
+       </h3>
+
+        <div class="imagens">
+            
+          <div class="gon">
+
+            <img src="https://wallpapers.com/images/high/hunter-x-hunter-pictures-6twqx8tip71obg79.webp" alt="Gon">
+
+          </div>
+
+          <div class="vs">
+
+            <img src="https://www.pngplay.com/wp-content/uploads/1/Letter-X-PNG-Photo.png" alt="versus">
+
+          </div>
+
+          <div class="killua">
+
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Killua-Zoldyck-PNG-Clipart-Background.png" alt="Killua">
+
+          </div>
+
+        </div>
+
+        <div class="escolhas">
+          <spam class="item-escolha">
+
+            <input class="input-radio" type="radio" name="escolha" id="pedra" value="1">
+            <label class="label" for="pedra">Pedra <img src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-flat/24/Rock-Flat-icon.png"></label>
+            
+          </spam>
+
+          <spam class="item-escolha">
+
+            <input class="input-radio" type="radio" name="escolha" id="papel" value="2">
+            <label class="label" for="papel">Papel <img src="https://icons.iconarchive.com/icons/designcontest/ecommerce-business/24/document-icon.png"></label>
+
+          </spam>
+
+          <spam class="item-escolha">
+
+            <input class="input-radio" type="radio" name="escolha" id="tesoura" value="3">
+            <label class="label" for="tesoura">Tesoura <img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-edit-cut-icon.png"></label>
+
+          </spam>
+
+          <div class="btn">
+            <button onclick="play()">Escolher</button>
+          </div>
+
+            <div id="overlay" class="overlay">
+
+              <div class="resultado">
+
+              <h2 id="game-result">Olá</h2>
+
+              <img id="dinamic-img" src="https://media0.giphy.com/media/KtPjuhm119ggU/100.webp?cid=790b76118nrctfbxkpv6v13s31ndh59tjwc5w75a9zx9qiqb&ep=v1_gifs_search&rid=100.webp&ct=g" alt="Um gif animado">
+
+              <button class="play-again" onclick="reset()">Jogar Novamente</button>
+
+              <div class="respostas"> 
+                <p id="resGon">Gon escolheu:</p>
+                <p id="resKill">Killua escolheu:</p>
+              </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+      </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+          // Adiciona a API do YouTube
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+              events: {
+                'onReady': onPlayerReady
+              }
+            });
+          }
+        
+          function onPlayerReady(event) {
+            var stopTime = 20; // Tempo em segundos (por exemplo, 110 segundos desde o início do vídeo)
+            setTimeout(function() {
+              player.pauseVideo(); // Pausa o vídeo automaticamente
+            }, stopTime * 1000); // Converte segundos para milissegundos
+          }
+        </script>
+
+        <script src="script.js"></script>
+</body>
+</html>
