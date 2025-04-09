@@ -102,47 +102,6 @@
         </div>
 
       </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <script>
-          // Adiciona a API do YouTube
-          var tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/iframe_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        
-          var player;
-          function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-              events: {
-                'onReady': onPlayerReady
-              }
-            });
-          }
-        
-          function onPlayerReady(event) {
-            var stopTime = 20; // Tempo em segundos (por exemplo, 110 segundos desde o início do vídeo)
-            setTimeout(function() {
-              player.pauseVideo(); // Pausa o vídeo automaticamente
-            }, stopTime * 1000); // Converte segundos para milissegundos
-          }
-        </script>
 
         <script src="script.js"></script>
 </body>
